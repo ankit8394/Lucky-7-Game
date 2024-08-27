@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky-7 Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="res">
+            <span id="ppp"></span>
+            <button id="btn-res" onclick="reset()">Play again!</button>
+        </div>
+        <div class="game-panel" id="gp">
+            <div id="overlay"></div>
+        <div id="band" class="row">
+            <div class="col" id="box-one">
+                <span id="text-one">0</span>
+                <img id="imgk-one"  onclick="hh1()" src="assets/image1.png" alt="image here">
+            </div>
+            <div class="col" id="box-two">
+                <span id="text-two">0</span>
+                <img id="imgk-two" onclick="hh2()" src="assets/image1.png" alt="image here">
+            </div>
+            <div class="col" id="box-three">
+                <span id="text-three">0</span>
+                <img id="imgk-three"  onclick="hh3()" src="assets/image1.png" alt="image here">
+            </div>
+        </div>
+        <div id="band2" class="row">
+            <div class="col">
+                <span id="text-four">0</span>
+                <img id="imgk-four" onclick="hh4()" src="assets/image1.png" alt="image here">
+            </div>
+            <div class="col">
+                <span id="text-five">0</span>
+                <img id="imgk-five" onclick="hh5()" src="assets/image1.png" alt="image here">
+            </div>
+            <div class="col">
+                <span id="text-six">0</span>
+                <img id="imgk-six" onclick="hh6()" src="assets/image1.png" alt="image here">
+            </div>
+        </div>
+        <div id="band3" class="row">
+            <div class="col">
+                <span id="text-seven">0</span>
+                <img id="imgk-seven"  onclick="hh7()" src="assets/image1.png" alt="image here">
+            </div>
+            <div class="col">
+                <span id="text-eight">0</span>
+                <img id="imgk-eight"  onclick="hh8()" src="assets/image1.png" alt="image here">
+            </div>
+            <div class="col">
+                <span id="text-nine">0</span>
+                <img id="imgk-nine"  onclick="hh9()" src="assets/image1.png" alt="image here">
+            </div>
+        </div> 
+        <div class="bt-div"><button onclick=" btn()" id="btn1">Start</button> </div>
+        
+    </div>   
+    </div>  
+    <script src="app.js"></script>       
+</body>
+</html>
