@@ -1,9 +1,16 @@
 let jackpot_number=0;
 let click_check=0;
 let win="0";
+let win_amount=0;
+
 
 function btn()
 {
+    
+    if(document.getElementById("amount").value==""){
+    document.getElementById("sp").innerHTML="Please enter amount";
+}else{
+    document.getElementById("sp").style.display="none";
     document.getElementById("overlay").style.display="none";
     document.getElementById("imgk-one").src="assets/img2.jpg";
     document.getElementById("imgk-two").src="assets/img2.jpg";
@@ -16,36 +23,40 @@ function btn()
     document.getElementById("imgk-nine").src="assets/img2.jpg";
     document.getElementById("btn1").disabled="disabled";
 
-    jackpot_number=Math.floor((Math.random()*9)+1);
+        jackpot_number=Math.floor((Math.random()*9)+1);
+        document.getElementById("amount").disabled=true;
+        win_amount =document.getElementById("amount").value*10;
+        console.log(jackpot_number);// to check where is 7
     
-    if (jackpot_number==1)
-    {
-        document.getElementById("text-one").innerHTML="7";
-    }
-    else if(jackpot_number==2){
-        document.getElementById("text-two").innerHTML="7";
-    }
-    else if(jackpot_number==3){
-        document.getElementById("text-three").innerHTML="7";
-    }
-    else if(jackpot_number==4){
-        document.getElementById("text-four").innerHTML="7";
-    }
-    else if(jackpot_number==5){
-        document.getElementById("text-five").innerHTML="7";
-    }
-    else if(jackpot_number==6){
-        document.getElementById("text-six").innerHTML="7";
-    }
-    else if(jackpot_number==7){
-        document.getElementById("text-seven").innerHTML="7";
-    }
-    else if(jackpot_number==8){
-        document.getElementById("text-eight").innerHTML="7";
-    }
-    else if(jackpot_number==9){
-        document.getElementById("text-nine").innerHTML="7";
-    }
+        if (jackpot_number==1)
+        {
+            document.getElementById("text-one").innerHTML="7";
+        }
+        else if(jackpot_number==2){
+            document.getElementById("text-two").innerHTML="7";
+        }
+        else if(jackpot_number==3){
+            document.getElementById("text-three").innerHTML="7";
+        }
+        else if(jackpot_number==4){
+            document.getElementById("text-four").innerHTML="7";
+        }
+        else if(jackpot_number==5){
+            document.getElementById("text-five").innerHTML="7";
+        }
+        else if(jackpot_number==6){
+            document.getElementById("text-six").innerHTML="7";
+        }
+        else if(jackpot_number==7){
+            document.getElementById("text-seven").innerHTML="7";
+        }
+        else if(jackpot_number==8){
+            document.getElementById("text-eight").innerHTML="7";
+        }
+        else if(jackpot_number==9){
+            document.getElementById("text-nine").innerHTML="7";
+        }
+}
 };
 function hh1()
     {
@@ -55,11 +66,12 @@ function hh1()
         else {
             click_check=click_check+1;
             document.getElementById("imgk-one").style.display="none";
+            document.getElementById("btn1").style.display="none";
             disableImgClick();
             document.getElementById("btn-res").style.display="block";
         }
         if (document.getElementById("text-one").innerHTML!="0"){
-        document.getElementById("ppp").innerHTML="<span style='color:green'>You win</span>";
+        document.getElementById("ppp").innerHTML="<span style='color:green'>You win</span>"+win_amount;
         }
         else{
         document.getElementById("ppp").innerHTML="<span style='color:red'>You loss</span>";
@@ -73,11 +85,12 @@ function hh1()
         else {
             click_check=click_check+1;
             document.getElementById("imgk-two").style.display="none";
+            document.getElementById("btn1").style.display="none";
             disableImgClick();
             document.getElementById("btn-res").style.display="block";
         }
         if (document.getElementById("text-two").innerHTML!="0"){
-        document.getElementById("ppp").innerHTML="<span style='color:green'>You win</span>";
+        document.getElementById("ppp").innerHTML="<span style='color:green'>You win</span>"+win_amount;
         }
         else{
         document.getElementById("ppp").innerHTML="<span style='color:red'>You loss</span>";
@@ -91,11 +104,12 @@ function hh1()
         else {
             click_check=click_check+1;
             document.getElementById("imgk-three").style.display="none";
+            document.getElementById("btn1").style.display="none";
             disableImgClick();
             document.getElementById("btn-res").style.display="block";
         }
         if (document.getElementById("text-three").innerHTML!="0"){
-        document.getElementById("ppp").innerHTML="<span style='color:green'>You win</span>";
+        document.getElementById("ppp").innerHTML="<span style='color:green'>You win</span>"+win_amount;
         }
         else{
         document.getElementById("ppp").innerHTML="<span style='color:red'>You loss</span>";
@@ -109,11 +123,12 @@ function hh1()
         else {
             click_check=click_check+1;
             document.getElementById("imgk-four").style.display="none";
+            document.getElementById("btn1").style.display="none";
             disableImgClick();
             document.getElementById("btn-res").style.display="block";
         }
         if (document.getElementById("text-four").innerHTML!="0"){
-        document.getElementById("ppp").innerHTML="<span style='color:green'>You win</span>";
+        document.getElementById("ppp").innerHTML="<span style='color:green'>You win</span>"+win_amount;
         }
         else{
         document.getElementById("ppp").innerHTML="<span style='color:red'>You loss</span>";
@@ -127,11 +142,12 @@ function hh1()
         else {
             click_check=click_check+1;
             document.getElementById("imgk-five").style.display="none";
+            document.getElementById("btn1").style.display="none";
             disableImgClick();
             document.getElementById("btn-res").style.display="block";
         }
         if (document.getElementById("text-five").innerHTML!="0"){
-        document.getElementById("ppp").innerHTML="<span style='color:green'>You win</span>";
+        document.getElementById("ppp").innerHTML="<span style='color:green'>You win</span>"+win_amount;
         }
         else{
         document.getElementById("ppp").innerHTML="<span style='color:red'>You loss</span>";
@@ -145,11 +161,12 @@ function hh1()
         else {
             click_check=click_check+1;
             document.getElementById("imgk-six").style.display="none";
+            document.getElementById("btn1").style.display="none";
             disableImgClick();
             document.getElementById("btn-res").style.display="block";
         }
         if (document.getElementById("text-six").innerHTML!="0"){
-        document.getElementById("ppp").innerHTML="<span style='color:green'>You win</span>";
+        document.getElementById("ppp").innerHTML="<span style='color:green'>You win</span>"+win_amount;
         }
         else{
         document.getElementById("ppp").innerHTML="<span style='color:red'>You loss</span>";
@@ -163,11 +180,12 @@ function hh1()
         else {
             click_check=click_check+1;
             document.getElementById("imgk-seven").style.display="none";
+            document.getElementById("btn1").style.display="none";
             disableImgClick();
             document.getElementById("btn-res").style.display="block";
         }
         if (document.getElementById("text-seven").innerHTML!="0"){
-        document.getElementById("ppp").innerHTML="<span style='color:green'>You win</span>";
+        document.getElementById("ppp").innerHTML="<span style='color:green'>You win</span>"+win_amount;
         }
         else{
         document.getElementById("ppp").innerHTML="<span style='color:red'>You loss</span>";
@@ -181,11 +199,12 @@ function hh1()
         else {
             click_check=click_check+1;
             document.getElementById("imgk-eight").style.display="none";
+            document.getElementById("btn1").style.display="none";
             disableImgClick();
             document.getElementById("btn-res").style.display="block";
         }
         if (document.getElementById("text-eight").innerHTML!="0"){
-        document.getElementById("ppp").innerHTML="<span style='color:green'>You win</span>";
+        document.getElementById("ppp").innerHTML="<span style='color:green'>You win</span>"+win_amount;
         }
         else{
         document.getElementById("ppp").innerHTML="<span style='color:red'>You loss</span>";
@@ -199,11 +218,12 @@ function hh1()
         else {
             click_check=click_check+1;
             document.getElementById("imgk-nine").style.display="none";
+            document.getElementById("btn1").style.display="none";
             disableImgClick();
             document.getElementById("btn-res").style.display="block";
         }
         if (document.getElementById("text-nine").innerHTML!="0"){
-        document.getElementById("ppp").innerHTML="<span style='color:green'>You win</span>";
+        document.getElementById("ppp").innerHTML="<span style='color:green'>You win</span>"+win_amount;
         }
         else{
         document.getElementById("ppp").innerHTML="<span style='color:red'>You loss</span>";
