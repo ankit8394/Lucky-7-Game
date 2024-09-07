@@ -26,7 +26,7 @@ function btn()
         jackpot_number=Math.floor((Math.random()*9)+1);
         document.getElementById("amount").disabled=true;
         win_amount =document.getElementById("amount").value*10;
-        console.log(jackpot_number);// to check where is 7
+        //console.log(jackpot_number); to check where is 7
     
         if (jackpot_number==1)
         {
